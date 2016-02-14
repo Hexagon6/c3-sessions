@@ -9,12 +9,31 @@
 </body>
 
 <template name="talk_list">
-  <ul>
+  <table>
+    <tr>
+      <th scope="col">Raum</th>
+      <th scope="col">Day</th>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Watch</th>
+    </tr>
   {{#each talk}}
-    <li> Raum: {{room}}
-        Day:  {{day}}
-        {{id}}: <a href="https://media.ccc.de/v/{{slug}}#video">{{title}}</a>
-    </li>
+    <tr>
+      <td>{{room}}</td>
+      <td>{{day}}</td>
+      <td>{{id}}</td>
+      <td>{{title}}
+        <div id="desc_{{id}}" style="display:none">{{description}}</div>
+      </td>
+      <td><a href="https://media.ccc.de/v/{{slug}}#video">watch</a></td>
+    </tr>
   {{/each}}
-  </ul>
+  <!--
+  correct:
+  http://cdn.media.ccc.de/congress/2015/webm-hd/32c3-7510-en-de-Windows_drivers_attack_surface_webm-hd.webm
+  $domain/congress/$year/$format/$c3-$id-$lang-$title_$format.$format-spec
+  wrong:
+  http://cdn.media.ccc.de/congress/2015/webm-hd/32c3-7510-windows_drivers_attack_surface_webm-hd.webm
+-->
+</table>
 </template>
