@@ -22,8 +22,8 @@ if (Meteor.isClient) {
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
+    // code to run on server at startup
     if(Talks.find().count() === 0){
-      // code to run on server at startup
       var data = JSON.parse(Assets.getText("schedule.json"));
 
       for(day = 0; day < data.schedule.conference.daysCount;  day++){
