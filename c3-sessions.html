@@ -17,16 +17,21 @@
       <th scope="col">ID</th>
       <th scope="col">Title</th>
       <th scope="col">Watch</th>
+      <th scope="col">Description</th>
     </tr>
   {{#each talk}}
     <tr>
       <td>{{room}}</td>
       <td>{{day}}</td>
-      <td>{{id}}</td>
-      <td>{{title}}
-        <div id="desc_{{id}}" style="display:none">{{description}}</div>
-      </td>
+      <td>
+        <a name="{{id}}" href="https://events.ccc.de/congress/{{year}}/Fahrplan/events/{{id}}.html">
+          {{id}}</a></td>
+      <td>{{title}}</td>
       <td><a href="https://media.ccc.de/v/{{slug}}#video">watch</a></td>
+      <td>
+        <a href="#toggle_description" name="toggle_description">more</a>
+        <p id="desc_{{id}}" style="display:none">{{description}}</p>
+      </td>
     </tr>
   {{/each}}
   <!--

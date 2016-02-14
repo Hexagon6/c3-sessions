@@ -25,6 +25,10 @@ if (Meteor.isServer) {
     // code to run on server at startup
     if(Talks.find().count() === 0){
       var data = JSON.parse(Assets.getText("32c3/schedule.json"));
+      
+      var conference = data.schedule.conference;
+      var c3_acronym = conference.acronym;
+      var year = conference.start.split('-')[0];
 
       for(day = 0; day < data.schedule.conference.daysCount;  day++){
         var rooms = (data.schedule.conference.days[day]).rooms;
@@ -34,7 +38,8 @@ if (Meteor.isServer) {
                 Talks.insert({
                   day: day, room: rkey,
                   id: talk.id, description: talk.description,
-                  slug: talk.slug, title: talk.title
+                  slug: talk.slug, title: talk.title,
+                  year: year, conference: c3_acronym
                 });
               }
             })
