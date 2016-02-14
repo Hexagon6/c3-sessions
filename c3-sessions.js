@@ -13,7 +13,7 @@ Talks.allow({
 });
 
 if (Meteor.isClient) {
-  Template.talk_list.helpers({
+  Template.talk_table.helpers({
     talk: function(){
       return Talks.find();
     }
