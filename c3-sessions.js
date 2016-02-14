@@ -36,7 +36,7 @@ if (Meteor.isServer) {
             _.each(room, function(talk){
               if(!talk.do_not_record){
                 Talks.insert({
-                  day: day, room: rkey,
+                  day: day, room: rkey.replace("Hall ",""),
                   id: talk.id, description: talk.description,
                   slug: talk.slug, title: talk.title,
                   year: year, conference: c3_acronym
