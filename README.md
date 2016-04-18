@@ -19,3 +19,6 @@ After the basic functionality of this app is implemented I will add older confer
 
 # origin
 The source data in private/32c3/schedule.json, is available here (latest version ref): [http://events.ccc.de/congress/2015/Fahrplan/version](http://events.ccc.de/congress/2015/Fahrplan/version)
+
+# demo
+[c3-sessions.fet.li](https://c3-sessions.fet.li)
