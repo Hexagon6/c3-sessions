@@ -24,4 +24,10 @@ if(Talks.find().count() === 0){
   });
 }
 
+Talks.allow({
+  insert: () => false,
+  update: () => false,
+  remove: () => false
+});
+
 Meteor.publish('talks', () => Talks.find());
