@@ -23,3 +23,5 @@ if(Talks.find().count() === 0){
     }
   });
 }
+
+Meteor.publish('talks', () => Talks.find());
