@@ -1,3 +1,5 @@
 .meteor/local
 .meteor/meteorite
 *.tar.gz
+.env
+node_modules/
