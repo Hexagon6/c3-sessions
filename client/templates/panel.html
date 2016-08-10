@@ -1,0 +1,41 @@
+<template name="panel">
+
+<div class="panel panel-default">
+    <div class="panel-heading">Search for c3 talks</div>
+    <div class="panel-body">
+        <form class="form-inline" role="form" id="search">
+            <div class="form-group">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="name" name="name" value="" placeholder="Talk" autofocus>
+                    <span data-toggle="tooltip" class="input-group-addon cursor-pointer" title="Use * and ? as wildcards">?</span>
+                </div>
+            </div>
+            <div class="form-group">
+                <select name="congress" data-placeholder="Congress" class="form-control chosen-select" id="congress">
+                    <option selected>32c3</option>
+                    <option>31c3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="day" data-placeholder="Day" class="form-control chosen-select" id="day">
+                    <option selected></option>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select name="hall" data-placeholder="Hall" class="form-control chosen-select" id="hall">
+                    <option selected ></option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>6</option>
+                    <option>G</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>
+</template>
