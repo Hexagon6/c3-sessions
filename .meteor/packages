@@ -17,3 +17,4 @@ ecmascript@0.5.7              # Enable ECMAScript2015+ syntax in app code
 
 standard-minifier-css
 standard-minifier-js
+matb33:bootstrap-full

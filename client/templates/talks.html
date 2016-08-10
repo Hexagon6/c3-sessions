@@ -1,12 +1,16 @@
 <template name="talks">
-  <table>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-condensed">
     <tr>
       <th scope="col">Hall</th>
       <th scope="col">Day</th>
       <th scope="col">ID</th>
       <th scope="col">Title</th>
       <th scope="col">Watch</th>
+      <!--
       <th scope="col">Description</th>
+      -->
     </tr>
   {{#each talk}}
     <tr>
@@ -15,12 +19,11 @@
       <td>
         <a name="{{id}}" href="https://events.ccc.de/congress/{{year}}/Fahrplan/events/{{id}}.html">
           {{id}}</a></td>
-      <td>{{title}}</td>
+      <td><a href="#toggle_description" name="toggle_description">{{title}}</a></td>
       <td><a href="https://media.ccc.de/v/{{slug}}#video">watch</a></td>
-      <td>
-        <a href="#toggle_description" name="toggle_description">more</a>
-        <p id="desc_{{id}}" style="display:none">{{description}}</p>
-      </td>
+    </tr>
+    <tr id="desc_{{id}}" style="display:none">
+      <td><p>{{description}}</p></td>
     </tr>
   {{/each}}
   <!--
@@ -31,4 +34,5 @@
   http://cdn.media.ccc.de/congress/2015/webm-hd/32c3-7510-windows_drivers_attack_surface_webm-hd.webm
 -->
 </table>
+</div>
 </template>
